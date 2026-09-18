@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Arte Virtual - Don Bosco</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- Encabezado Principal -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-left">
+                <img src="img/logo-donbosco-circular.png" alt="Don Bosco">
+            </div>
+            <div class="header-text">
+                <h1>GALERIA DE ARTE VIRTUAL</h1>
+                <h2>UNIDAD EDUCATIVA DON BOSCO</h2>
+                <p class="slogan">"Buenos Cristianos y Honrados Ciudadanos" ❤️</p>
+            </div>
+            <div class="logo-right">
+                <img src="img/logo-colegio.png" alt="Logo Colegio">
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#inicio" class="active">🏠 INICIO</a></li>
+            <li><a href="#exposiciones">🎨 EXPOSICIONES</a></li>
+            <li><a href="#cualidades">⭐ CUALIDADES</a></li>
+            <li><a href="#sobre-nosotros">📖 SOBRE DON BOSCO</a></li>
+            <li><a href="#contacto">✉️ CONTACTO</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="content">
+        
+        <!-- SECCIÓN 1: INICIO -->
+        <section id="inicio" class="tab-content active">
+            <div class="hero-container">
+                <h2 class="hero-title">¡BIENVENIDOS A NUESTRO ESPACIO CREATIVO!</h2>
+                <p class="hero-subtitle">Descubre la alegría y el talento de nuestros estudiantes a través de sus obras de arte.</p>
+                <div class="hero-actions">
+                    <button id="btn-explorar" class="btn-primary" data-target="#exposiciones">
+                        Explorar Galería
+                    </button>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper"><span class="feature-icon">🎨</span></div>
+                    <h3>¿Qué es la galería?</h3>
+                    <p>Un espacio virtual donde exponemos, curso por curso, las pinturas y dibujos que nuestros estudiantes elaboran en clases de arte y en proyectos institucionales.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper"><span class="feature-icon">🎯</span></div>
+                    <h3>Nuestro objetivo</h3>
+                    <p>Dar visibilidad al trabajo creativo de cada estudiante, motivar la disciplina artística y acercar la vida del colegio a las familias, sin importar la distancia.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper"><span class="feature-icon">❤️</span></div>
+                    <h3>Por qué importa</h3>
+                    <p>Siguiendo el espíritu de Don Bosco, el arte es una vía de expresión y crecimiento personal: aquí cada estudiante encuentra un lugar donde su talento es celebrado.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: EXPOSICIONES (1ro a 4to de Secundaria) -->
+        <section id="exposiciones" class="tab-content">
+            <div class="exposiciones-container">
+                
+                <!-- Vista 1: Cursos en una sola fila -->
+                <div id="vista-cursos">
+                    <h2 class="exposiciones-title">Nuestras Exposiciones</h2>
+                    
+                    <div class="cursos-grid">
+                        
+                        <!-- 1ro de Secundaria -->
+                        <div class="curso-card border-blue">
+                            <div class="curso-image-wrapper">
+                                <img src="img/dibujo1.jpg" alt="Dibujo 1ro de Secundaria" class="curso-img">
+                            </div>
+                            <h3>CARBONCILLO</h3>
+                            <p>Muestra artísticas de los estudiantes.</p>
+                            <button class="btn-ver-galeria">Ver Galería Completa</button>
+                        </div>
+
+                        <!-- 2do de Secundaria -->
+                        <div class="curso-card border-red">
+                            <div class="curso-image-wrapper">
+                                <img src="img/dibujo2.jpg" alt="Dibujo 2do de Secundaria" class="curso-img">
+                            </div>
+                            <h3>ACUARELA</h3>
+                            <p>Muestra artísticas de los estudiantes.</p>
+                            <button class="btn-ver-galeria">Ver Galería Completa</button>
+                        </div>
+
+                        <!-- 3ro de Secundaria -->
+                        <div class="curso-card border-yellow">
+                            <div class="curso-image-wrapper">
+                                <img src="img/dibujo3.jpg" alt="Dibujo 3ro de Secundaria" class="curso-img">
+                            </div>
+                            <h3>PINTURA</h3>
+                            <p>Muestra artísticas de los estudiantes.</p>
+                            <button class="btn-ver-galeria">Ver Galería Completa</button>
+                        </div>
+
+                        <!-- 4to de Secundaria -->
+                        <div class="curso-card border-purple">
+                            <div class="curso-image-wrapper">
+                                <img src="img/dibujo4.jpg" alt="Dibujo 4to de Secundaria" class="curso-img">
+                            </div>
+                            <h3>COLORES</h3>
+                            <p>Muestra artísticas de los estudiantes.</p>
+                            <button class="btn-ver-galeria">Ver Galería Completa</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Vista 2: Galería de Fotos del Curso Seleccionado -->
+                <div id="vista-galeria-completa" class="galeria-subview" style="display: none;">
+                    <div class="header-galeria">
+                        <button id="btn-volver-cursos" class="btn-volver">⬅ Volver a Cursos</button>
+                        <h2 id="galeria-curso-title" class="exposiciones-title">Galería de Curso</h2>
+                    </div>
+                    
+                    <div id="obras-estudiantes-grid" class="obras-grid"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: CUALIDADES -->
+        <section id="cualidades" class="tab-content">
+            <div class="cualidades-container">
+                <h2 class="cualidades-title">Cualidades Destacadas</h2>
+                
+                <div class="cualidades-grid">
+                    <div class="cualidad-item">
+                        <span class="star-icon">⭐</span> Creatividad
+                    </div>
+                    <div class="cualidad-item">
+                        <span class="star-icon">⭐</span> Esfuerzo
+                    </div>
+                    <div class="cualidad-item">
+                        <span class="star-icon">⭐</span> Expresión
+                    </div>
+                </div>
+
+                <div class="cualidades-reflexion-box">
+                    <p>
+                        "Estas tres cualidades son indispensables para fortalecer los valores que definen a nuestros estudiantes, transformando el proceso de aprendizaje en un camino de superación, autodescubrimiento y sensibilidad social. A través del arte, no solo formamos jóvenes creadores, sino personas íntegras y comprometidas, capaces de aportar belleza y empatía a su entorno."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: SOBRE DON BOSCO -->
+        <section id="sobre-nosotros" class="tab-content">
+            <h2 class="section-title">Don Bosco</h2>
+            <p>"Fue fundada en marzo de 1964 durante la presidencia del doctor Víctor Paz Estensoro, con el nombre de escuela seccional Abaroa, perteneciente al km 21 faja central, al fundarse tenía alrededor 20 estudiantes hijos de colonizadores de los departamentos de Cochabamba y potosí. La escuela estaba situada a orillas del río orito, hecha con material del lugar. En 1969, se construye una nueva escuela con materiales adecuados en el kilómetro 28 faja central, año tras año se aumentaban los estudiantes y los Ítems. En 1977, llegaron tres religiosas a la comunidad de San Germán, con un espíritu solidario y dedicación integra a la educación. En 1979, se construye la infraestructura antigua en la comunidad de San Germán y en 1982 se adopta el nombre de “DON BOSCO” y pasa a ser de convenio FE Y ALEGRIA, siendo la primera Directora la Hermana Filomena Serrano. La Unidad Educativa “Don Bosco” EPDB nivel secundario ubicada en la comunidad de San Germán km 27 faja central, fue creada en 1988, siendo la primera promoción en 1991. En 2011, pasa a ser dependiente de las Escuelas Populares Don Bosco de la familia Salesiana Regional Montero. Actualmente la Unidad Educativa cuenta con 348 estudiantes, 20 profesores, 1 director y una secretaria. Con una infraestructura moderna (módulo) acorde a las exigencias de la Ley 070 Avelino Siñani y Elizardo Pérez Modelo Educativo Sociocomunirario Productivo cada año de escolaridad cuenta con dos paralelos con excepción de uno de los tres. La práctica pedagógica se realiza en el turno de la mañana. La Unidad Educativa cuenta con Bachiller Técnico Humanístico BTH con la carrera Sistemas Informáticos."</p>
+        </section>
+
+        <!-- SECCIÓN 5: CONTACTO -->
+        <section id="contacto" class="tab-content">
+            <h2 class="section-title">Contacto y Colaboración</h2>
+            
+            <div class="contacto-wrapper">
+                <div class="contacto-col formulario-box">
+                    <h3>✉️ Envíanos un Mensaje</h3>
+                    <p class="form-subtitle">¿Tienes alguna duda, comentario o sugerencia sobre nuestra galería?</p>
+                    
+                    <form id="form-contacto" action="https://formsubmit.co/ajax/saimonzarateperez@gmail.com" method="POST" class="contacto-form">
+                        <!-- Configuración de FormSubmit (servicio gratuito de envío de formularios) -->
+                        <input type="hidden" name="_subject" value="Nuevo mensaje - Galería de Arte Virtual Don Bosco">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="correo" placeholder="Ej. juan@gmail.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto" name="asunto" placeholder="Ej. Consulta sobre las obras" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" id="btn-enviar-contacto" class="btn-enviar">Enviar Mensaje</button>
+
+                        <div id="contacto-estado" class="contacto-estado" style="display:none;"></div>
+                    </form>
+                </div>
+                
+                <div class="contacto-col info-box">
+                    <div class="info-card">
+                        <h3>📞 Datos de Contacto</h3>
+                        <p><strong>📍 Dirección:</strong> San Germán - Yapacaní, Santa Cruz, Bolivia</p>
+                        <p><strong>📞 Teléfono:</strong> +591 68783997</p>
+                        <p><strong>✉️ Correo:</strong> saimonzarateperez@gmail.com</p>
+                    </div>
+
+                    <div class="info-card colab-card">
+                        <h3>🤝 ¿Cómo Colaborar?</h3>
+                        <p>Si deseas apoyar este espacio virtual, donar materiales artísticos para los talleres de los estudiantes o participar en nuestras actividades, escríbenos directamente con el asunto <strong>"Colaboración Galería"</strong>.</p>
+                    </div>
+
+                    <div class="info-card mapa-card">
+                        <h3>🗺️ Ubicación</h3>
+                        <div class="map-wrapper">
+                            <img src="img/ubicacioncolegio.png" alt="Mapa de Ubicación Don Bosco" class="map-static-img">
+                            <a href="https://maps.app.goo.gl/x3UWtcwHiyv8Q3mZ9" target="_blank" class="btn-abrir-maps">
+                                Abrir en Maps ↗
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="main-footer">
+        <p class="quote">"No Basta Amar a los jovenes, es preciso que ellos se den cuenta de que son amados." — Don Bosco</p>
+        <div class="footer-bottom">
+            <img src="img/logo-donbosco-circular.png" alt="Don Bosco Footer" class="footer-logo">
+            <div class="footer-text">
+                <h3>DON BOSCO</h3>
+                <p>PADRE, MAESTRO Y AMIGO DE LOS JÓVENES</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL PARA VER OBRA EN DETALLE -->
+    <div id="obra-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button id="modal-close" class="modal-close-btn">&times;</button>
+            <div class="modal-image-container">
+                <img id="modal-img" src="" alt="Obra Ampliada">
+            </div>
+            <div class="modal-details">
+                <h3 id="modal-titulo">"Título de la Obra"</h3>
+                <p id="modal-autor">✍️ Nombre del Estudiante</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
